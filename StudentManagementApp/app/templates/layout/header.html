@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark p-3">
+    <div class="container-fluid">
+        <!-- Logo hoặc Tiêu đề -->
+        <a class="navbar-brand fw-bold" href="/login">Student Management</a>
+
+        <!-- Nút Toggle cho Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nội dung Thanh điều hướng -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Menu trái -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/login">Wellcome</a>
+                </li>
+                {% if current_user.is_authenticated %}
+                {% if current_user.user_role.value == 4 %}
+                <!-- Đối với học sinh -->
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Kết quả học tập</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Thông báo</a>
+                </li>
+                {% else %}
+                <!-- Đối với các vai trò khác (Admin, Teacher, Staff, v.v.) -->
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{{ url_for('add_student') }}">Tiếp nhận học sinh</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/create-class-list">Lập danh sách</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Học tập
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/scores-input">Nhập điểm</a></li>
+                        <li><a class="dropdown-item" href="/scores-export">Xuất điểm</a></li>
+
+
+                    </ul>
+                </li>
+                {% endif %}
+                {% endif %}
+            </ul>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                {% if current_user.is_authenticated %}
+                <li class="nav-link text-light">
+                    <a class="nav-link text-light" href="/">
+                        <img src="{{ current_user.avatar }}" width="25" class="rounded-circle"/>
+                        <span>Chào {{current_user.username }}!</span>
+                    </a>
+                </li>
+                <li class="nav-link text-light">
+                    <a class="nav-link text-light bg-danger  border border-danger rounded px-3" href="/logout">Đăng xuất</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

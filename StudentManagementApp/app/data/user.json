@@ -1,0 +1,38 @@
+[
+  {
+    "ho_ten": "Trần Trung Hậu",
+    "username": "tthau",
+    "password": "12345",
+    "avatar": "https://res.cloudinary.com/tthau2004/image/upload/avatar_female_eomcmm.png",
+    "user_role": "ADMIN"
+  },
+  {
+    "ho_ten": "Nguyễn Văn A",
+    "username": "nva",
+    "password": "abc123",
+    "avatar": "https://res.cloudinary.com/tthau2004/image/upload/avatar_female_eomcmm.png",
+    "user_role": "TEACHER"
+  },
+  {
+    "ho_ten": "Trần Thị B",
+    "username": "ttb",
+    "password": "ttb123",
+    "avatar": "https://res.cloudinary.com/tthau2004/image/upload/avatar_female_eomcmm.png",
+    "user_role": "TEACHER"
+  },
+  {
+    "ho_ten": "Trần Thanh Sang",
+    "username": "ttsang",
+    "password": "2323",
+    "avatar": "https://res.cloudinary.com/tthau2004/image/upload/avatar_female_eomcmm.png",
+    "user_role": "STAFF"
+  },
+  {
+    "ho_ten": "Phạm Văn Bé",
+    "username": "pvb456",
+    "password": "pvb123",
+    "avatar": "https://res.cloudinary.com/tthau2004/image/upload/avatar_female_eomcmm.png",
+    "user_role": "TEACHER"
+  }
+]
+

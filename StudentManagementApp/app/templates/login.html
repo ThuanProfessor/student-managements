@@ -1,0 +1,40 @@
+{% extends '/layout/base.html' %}
+
+{% block content %}
+
+{% if not current_user.is_authenticated %}
+<h1 class="text-center text-danger mt-3 mb-2">ĐĂNG NHẬP NGƯỜI DÙNG</h1>
+
+{% if err_msg %}
+<div class="alert alert-danger">
+    {{ err_msg }}
+</div>
+{% endif %}
+
+<form method="post" action="/login">
+    <div class="d-flex justify-content-center align-items-center mt-3 mb-3">
+        <div class="card p-4  bg-" style="width: 50%; max-width: 600px;">
+            <div class="form-floating mb-3 mt-3">
+                <input type="text" class="form-control" id="username" placeholder="Tên đăng nhập" name="username">
+                <label for="username">Tên đăng nhập</label>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+                <input type="password" class="form-control" id="password" placeholder="Mật khẩu" name="password">
+                <label for="password">Mật khẩu</label>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+                <button type="submit" class="btn btn-success">Đăng nhập</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% else %}
+<div class="container text-center mt-5">
+    <div class="alert alert-primary" role="alert">
+        <h1 class="display-4">Chào mừng bạn đến với hệ thống quản lý học sinh!</h1>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
