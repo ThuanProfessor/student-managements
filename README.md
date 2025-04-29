@@ -123,3 +123,11 @@ Contributions are welcome! Please follow these steps:
 - Push to the branch: git push origin feature/your-feature-name
 
 - Submit a pull request
+## 📄 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+## 🙋‍♂️ Author
+ThuanProfessor
+📫 Visit GitHub Profile
+
+Feel free to reach out if you have any suggestions or improvements!
+
