@@ -60,27 +60,33 @@ A robust and extensible web-based student management application built with **Py
 ```bash
 git clone https://github.com/ThuanProfessor/student-managements.git
 cd student-managements
-
+```
 ### 2. Create Virtual Environment
 ```bash
 python -m venv venv
 source venv/bin/activate      # On Windows: venv\Scripts\activate
+```
 ### 3. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
+```
 ### 4. Setup MySQL Database
 - Open MySQL and create a database:
 ```bash
 CREATE DATABASE student_management;
+```
 - Update DB credentials in app.py:
 ```bash
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'your_username'
 app.config['MYSQL_PASSWORD'] = 'your_password'
 app.config['MYSQL_DB'] = 'student_management'
+```
 ### 5. Run the Application
 ```bash
 python app.py
+```
 ## 🗂️ Project Structure
 ```php
 student-managements/
@@ -94,6 +100,7 @@ student-managements/
 │   └── js/
 ├── requirements.txt        # Python dependencies
 └── README.md               # Project documentation
+```
 ## 🧮 Database Schema (Minimal)
 ```sql
 CREATE TABLE students (
@@ -103,5 +110,6 @@ CREATE TABLE students (
     class VARCHAR(10),
     email VARCHAR(100)
 );
+```
 ## 🤝 Contribution
 
