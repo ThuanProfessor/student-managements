@@ -112,4 +112,14 @@ CREATE TABLE students (
 );
 ```
 ## 🤝 Contribution
+Contributions are welcome! Please follow these steps:
 
+- Fork the repository
+
+- Create a new branch: git checkout -b feature/your-feature-name
+
+- Commit your changes: git commit -m 'Add your message'
+
+- Push to the branch: git push origin feature/your-feature-name
+
+- Submit a pull request
